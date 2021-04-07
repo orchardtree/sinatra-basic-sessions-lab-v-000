@@ -1,7 +1,7 @@
 class Item
-  attr_accessor :name
+  attr_accessor :item
   
   def initialize(params)
-    @name = params[:name]
+    @item = params[:item]
   end
 end
