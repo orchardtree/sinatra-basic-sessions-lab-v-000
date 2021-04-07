@@ -24,7 +24,7 @@ class App < Sinatra::Base
 =end
   
   post '/checkout' do
-    session[:item] = params[:item].fetch("name")
+    session[:item] = params[:item]
     @session = session
     @item = Item.new(params[:item])
     #binding.pry
