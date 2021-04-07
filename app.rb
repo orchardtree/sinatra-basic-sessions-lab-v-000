@@ -13,11 +13,10 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    @item = Item.new(params[:item])
-    #binding.pry
-    erb :show
-    session[:item] = @item.name
+    session[:item] = "socks"
     @session = session
+    @item = Item.new(params[:item])
+    erb :show
   end
   
 end
