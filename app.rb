@@ -13,7 +13,8 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    session[:item] = "socks" #params[:item].fetch("name").to_s
+    item_name = params[:item].fetch("name")
+    session[:item] = item_name
     @session = session
     @item = Item.new(params[:item])
     #binding.pry
