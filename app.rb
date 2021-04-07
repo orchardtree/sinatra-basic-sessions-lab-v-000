@@ -12,6 +12,7 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
+    @pitem = Item.new(params[:item])
     erb :show
   end
   
