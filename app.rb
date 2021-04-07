@@ -21,7 +21,3 @@ class App < Sinatra::Base
   end
   
 end
-
-
-    #session[:item] = item_name
-    #@session = session
