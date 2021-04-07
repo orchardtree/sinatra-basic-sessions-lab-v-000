@@ -14,7 +14,7 @@ class App < Sinatra::Base
   
   post '/checkout' do
     @item = Item.new(params[:item])
-    session["name"] = @item.name
+    session["name"] = params[:item]
     @session = session
     #binding.pry
     erb :show
