@@ -13,7 +13,7 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    session[:item] = "socks"
+    session[:item] = params[:item][name]
     @session = session
     @item = Item.new(params[:item])
     erb :show
