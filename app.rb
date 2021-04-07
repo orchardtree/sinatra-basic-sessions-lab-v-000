@@ -8,8 +8,8 @@ class App < Sinatra::Base
   end
   
   get '/' do
-    session[:item] = item_name
-    @session = session
+    #session[:item] = item_name
+    #@session = session
     erb :index
   end
   
